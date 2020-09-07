@@ -1,0 +1,345 @@
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(min-content, auto);
+  margin: 0 auto;
+  grid-template-areas:
+    "info info"
+    "nav nav"
+    "hero hero"
+    "main main"
+    "stats stats"
+    "clients clients"
+    "offer offer"
+    "footer footer";
+}
+
+.contact-info {
+  grid-area: info;
+  display: flex;
+  background-color: $dark-blue;
+  color: white;
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+
+nav {
+  grid-area: nav;
+  background-color: white;
+  padding: 1rem 10vw;
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+  img {
+    object-fit: contain;
+  }
+
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    a {
+      margin: 0 1rem;
+    }
+  }
+}
+
+.hero {
+  grid-area: hero;
+  background-image: url(../images/ventilation-hero.jpg);
+  background-clip: border-box;
+  background-size: cover;
+  height: 100vh;
+
+  &-box {
+    z-index: 2;
+    margin: 40vh 20vw;
+    height: 40vh;
+    width: inherit;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 1.4rem;
+    border-color: rgba(245, 245, 245, 0.9);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+
+    section {
+      max-width: 70%;
+    }
+
+    #sample {
+      width: auto;
+      object-fit: cover;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+main {
+  grid-area: main;
+  background-image: url(../images/window-apartment.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-clip: border-box;
+  width: auto;
+
+  .about {
+    margin: 25vh 25vw;
+    padding: 3rem;
+    background-color: white;
+    z-index: 2;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    h1 {
+      font-weight: 300;
+      font-size: 2rem;
+      color: black;
+    }
+
+    h2 {
+      font-size: 1rem;
+      color: $dark-blue;
+    }
+
+    img {
+      object-fit: contain;
+    }
+
+    hr {
+      color: $gray;
+      border-width: 2px;
+      margin-top: 5rem;
+      margin-bottom: 2rem;
+      width: 40%;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: $green;
+      color: black;
+      margin-top: 1rem;
+      padding: 1rem 3rem;
+      outline: none;
+      border: none;
+    }
+  }
+}
+
+hr {
+  color: $gray;
+  border-width: 2px;
+  // margin-top: 5rem;
+  // margin-bottom: 2rem;
+  width: 40%;
+}
+
+.stats {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(auto, 20vh);
+  grid-template-areas: "cell--1 cell--2 cell--3";
+  background-color: white;
+  gap: 5vh;
+  padding: 3vh 25vw;
+
+  &_cell {
+    max-height: inherit;
+    // background-clip: border-box;
+    // background-position: center;
+    // background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .number {
+      color: $green;
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .desc {
+      color: black;
+      text-transform: capitalize;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .cell {
+    &--1 {
+      grid-area: cell--1;
+      // background-image: url(../images/client_1.jpg);
+    }
+
+    &--2 {
+      grid-area: cell--2;
+      // background-image: url(../images/client_2.jpg);
+    }
+
+    &--3 {
+      grid-area: cell--3;
+      // background-image: url(../images/client_3.jpg);
+    }
+  }
+}
+
+.clients {
+  grid-area: clients;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(85vh, auto);
+  grid-template-areas: "client--1 client--2 client--3";
+
+  &_client {
+    transition: 0.5s;
+    background-position: center;
+    overflow: hidden;
+    z-index: 0;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    &_intern {
+      width: 100%;
+      height: 100%;
+      transition: 1s;
+      font-size: 1.4rem;
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+      button {
+        padding: 1rem 2rem;
+        background: transparent;
+        outline: none;
+        border: 2px solid black;
+        font-size: 1.4rem;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        transform: scale(1.02);
+
+        button {
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+  }
+
+  .client {
+    &--1 {
+      grid-area: client--1;
+      background-image: url(../images/client_1.jpg);
+    }
+
+    &--2 {
+      grid-area: client--2;
+      background-image: url(../images/client_2.jpg);
+    }
+
+    &--3 {
+      grid-area: client--3;
+      background-image: url(../images/client_3.jpg);
+    }
+  }
+}
+
+.offers {
+  grid-area: offer;
+  background-color: blueviolet;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, minmax(50vh, auto));
+  grid-template-areas:
+    "offer--1 offer--2"
+    "offer--3 offer--4";
+
+  &_offer {
+    max-height: inherit;
+    background-clip: border-box;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .offer {
+    &--1 {
+      grid-area: offer--1;
+      background-image: url(../images/client_1.jpg);
+    }
+
+    &--2 {
+      grid-area: offer--2;
+      background-image: url(../images/client_2.jpg);
+    }
+
+    &--3 {
+      grid-area: offer--3;
+      background-image: url(../images/client_3.jpg);
+    }
+
+    &--4 {
+      grid-area: offer--4;
+      background-image: url(../images/client_4.jpg);
+    }
+  }
+}
+
+// .offer {
+//   grid-area: offer;
+//   background-color: cyan;
+// }
+
+footer {
+  grid-area: footer;
+  background-color: black;
+  color: white;
+  height: 5vh;
+
+  span {
+    margin: 10vw auto;
+  }
+}
