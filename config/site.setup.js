@@ -86,7 +86,7 @@ async function runSetup() {
       '// Load CSS Reset from NPM\n'
       + '@import "~' + questions.cssreset + '"\n';
 
-    fs.writeFile(path.join(ROOT, '/src/stylesheets/styles.scss'), cssContent, (err) => {});
+    fs.writeFile(path.join(ROOT, '/src/stylesheets/styles.scss'), cssContent, (err) => {console.log('Something went wrong :(')});
   }
 
   // Add jQuery to scripts

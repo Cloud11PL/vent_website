@@ -9,13 +9,13 @@ if (!ROOT) {
 
 const config = {
   // Your website's name, used for favicon meta tags
-  site_name: 'Static Site Boilerplate',
+  site_name: 'Ventilation website',
 
   // Your website's description, used for favicon meta tags
   site_description: 'A modern boilerplate for static website development',
 
   // Your website's URL, used for sitemap
-  site_url: 'elastic-kare-ae2430.netlify.app',
+  site_url: 'https://elastic-kare-ae2430.netlify.app/',
 
   // Google Analytics tracking ID (leave blank to disable)
   googleAnalyticsUA: '',

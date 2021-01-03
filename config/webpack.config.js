@@ -17,9 +17,8 @@ module.exports = {
   mode: ['production', 'development'].includes(config.env)
     ? config.env
     : 'development',
-  devtool: config.env === 'production'
-    ? 'hidden-source-map'
-    : 'cheap-eval-source-map',
+  devtool:
+    config.env === 'production' ? 'hidden-source-map' : 'cheap-eval-source-map',
   devServer: {
     contentBase: path.join(config.root, config.paths.src),
     watchContentBase: true,

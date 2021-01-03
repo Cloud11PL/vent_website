@@ -324,7 +324,7 @@ nav {
 
       @media (min-width: $laptopL) {
         margin: 10em auto;
-        padding: calc($typical-padding - 1em);
+        padding: calc(#{$typical-padding} - 1em);
       }
 
       margin: 10em auto;
