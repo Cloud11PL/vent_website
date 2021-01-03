@@ -3,3 +3,19 @@ $dark-blue: #0081af;
 $dark: #04080f;
 $gray: #364753;
 $green: #35ff69;
+
+$laptopL: 1440px;
+$laptop: 1024px;
+$tablet: 768px;
+$mobileL: 425px;
+$mobileS: 320px;
+
+$typical-padding: 5em;
+$smaller-padding: 3em;
+$small-padding: 1em;
+
+$breakpoints: (
+  'phone': 320px,
+  'tablet': 768px,
+  'desktop': 1024px
+) !default;

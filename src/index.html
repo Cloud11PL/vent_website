@@ -1,140 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Static Site Boilerplate</title>
     <meta name="description" content="" />
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
+    />
+    <link rel="stylesheet" href="./stylesheets/all.css" />
+    <script defer src="./javascripts/all.js"></script>
+  </head>
+  <body>
     <div id="content">
-        <div class="contact-info">
-            <span>123457893</span> 
-            <span>kajsndakjsdmn@dsjnsf.pl</span>
-        </div>
-        <nav>
-            <img src="images/window.png" alt="logo" />
-            <section>
-                <a>HOME</a>
-                <a>OFFER</a>
-                <a>SHOP</a>
-                <a>CONTACT</a>
-                <a>SOMETHING</a>
-                <a>OTHER</a>
-            </section>
-        </nav>
-        <section class="hero">
-            <div class="hero-box">
-                <img id="sample" src="images/window.png" alt="window" />
-                <section>
-                    <h1>Header name</h1>
-                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit deserunt ratione at? Quas saepe doloremque ipsum enim quis labore eveniet explicabo aliquam, neque minima laborum distinctio dolores non fuga quaerat.</span>
-                </section>
-            </div>
-            <!-- <img src="./images/ventilation-hero.jpg"/> -->
+      <div class="contact-info">
+        <span>123457893</span>
+        <span>kajsndakjsdmn@dsjnsf.pl</span>
+      </div>
+      <nav>
+        <img src="images/window.png" alt="logo" />
+        <section id="menu">
+          <a href="#content">Home</a>
+          <a href="#rekuperacja">Rekuperacja</a>
+          <a href="#klimatyzacja">Klimatyzacja</a>
+          <a href="#dystrybucja-ciepla">Dystrybucja ciepła</a>
+          <a href="#biura">Biura</a>
         </section>
-        <main>
-            <section class="about">
-                <h1>Wentylacja i cos tam</h1>
-                <img src="images/window.png" alt="window">
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+      </nav>
+      <section class="hero">
+        <div class="my-slider">
+          <section class="slide" id="section_1">
+            <div class="slide_wrapper">
+              <div class="slide_wrapper_box">
+                <h1 class="slide_wrapper_header">
+                  Dobór odpowiednich rozwiązań dla wentylacji i klimatyzacji
+                </h1>
                 <hr />
-                <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio quo ratione dignissimos vero nostrum corporis fugit quidem nulla velit officiis, blanditiis iure dolor tenetur saepe officia omnis sunt quam?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio quo ratione dignissimos vero nostrum corporis fugit quidem nulla velit officiis, blanditiis iure dolor tenetur saepe officia omnis sunt quam?
-                    <br />
-                    <br />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio quo ratione dignissimos vero nostrum corporis fugit quidem nulla velit officiis, blanditiis iure dolor tenetur saepe officia omnis sunt quam?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio quo ratione dignissimos vero nostrum corporis fugit quidem nulla velit officiis, blanditiis iure dolor tenetur saepe officia omnis sunt quam?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio quo ratione dignissimos vero nostrum corporis fugit quidem nulla velit officiis, blanditiis iure dolor tenetur saepe officia omnis sunt quam?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio quo ratione dignissimos vero nostrum corporis fugit quidem nulla velit officiis, blanditiis iure dolor tenetur saepe officia omnis sunt quam?
-                    <br />
-                    <br />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio quo ratione dignissimos vero nostrum corporis fugit quidem nulla velit officiis, blanditiis iure dolor tenetur saepe officia omnis sunt quam?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio quo ratione dignissimos vero nostrum corporis fugit quidem nulla velit officiis, blanditiis iure dolor tenetur saepe officia omnis sunt quam?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio quo ratione dignissimos vero nostrum corporis fugit quidem nulla velit officiis, blanditiis iure dolor tenetur saepe officia omnis sunt quam?
-                    <br />
-                    <br />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio quo ratione dignissimos vero nostrum corporis fugit quidem nulla velit officiis, blanditiis iure dolor tenetur saepe officia omnis sunt quam?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio quo ratione dignissimos vero nostrum corporis fugit quidem nulla velit officiis, blanditiis iure dolor tenetur saepe officia omnis sunt quam?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio quo ratione dignissimos vero nostrum corporis fugit quidem nulla velit officiis, blanditiis iure dolor tenetur saepe officia omnis sunt quam?
-                </span>
-                <button>Button button</button>
-            </section>
-        </main>
-        <section class="stats">
-            <div class="stats_cell cell--1">
-                <img src="images/window.png" alt="window">
-                <span class="number">2000</span>
-                <span class="desc">Lorem ipsum dolor sit </span>
+                <span class="slide_wrapper_content"
+                  ><p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugit deserunt ratione at? Quas saepe doloremque ipsum enim
+                    quis labore eveniet explicabo aliquam, neque minima laborum
+                    distinctio dolores non fuga quaerat.
+                  </p></span
+                >
+                <button class="slide-btn">
+                  Dowiedz się więcej!
+                </button>
+              </div>
             </div>
-            <div class="stats_cell cell--2">
-                <img src="images/window.png" alt="window">
-                <span class="number">2000</span>
-                <span class="desc">Lorem ipsum dolor sit </span>
+          </section>
+          <section class="slide" id="section_2">
+            <div class="slide_wrapper">
+              <div class="slide_wrapper_box">
+                <h1 class="slide_wrapper_header">
+                  Projekt instalacji wentylacji mechanicznej i klimatyzacji
+                </h1>
+                <hr />
+                <span class="slide_wrapper_content"
+                  >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Fugit deserunt ratione at? Quas saepe doloremque ipsum enim
+                  quis labore eveniet explicabo aliquam, neque minima laborum
+                  distinctio dolores non fuga quaerat.</span
+                >
+                <button class="act-btn slide-btn">
+                  Dowiedz się więcej!
+                </button>
+              </div>
             </div>
-            <div class="stats_cell cell--3">
-                <img src="images/window.png" alt="window">
-                <span class="number">2000</span>
-                <span class="desc">Lorem ipsum dolor sit </span>
+          </section>
+          <section class="slide" id="section_3">
+            <div class="slide_wrapper">
+              <div class="slide_wrapper_box">
+                <h1 class="slide_wrapper_header">Montaż</h1>
+                <hr />
+                <span class="slide_wrapper_content"
+                  >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Fugit deserunt ratione at? Quas saepe doloremque ipsum enim
+                  quis labore eveniet explicabo aliquam, neque minima laborum
+                  distinctio dolores non fuga quaerat.</span
+                >
+                <button class="act-btn slide-btn">
+                  Dowiedz się więcej!
+                </button>
+              </div>
             </div>
+          </section>
+          <section class="slide" id="section_4">
+            <div class="slide_wrapper">
+              <div class="slide_wrapper_box">
+                <h1 class="slide_wrapper_header">Doradztwo techniczne</h1>
+                <hr />
+                <span class="slide_wrapper_content"
+                  >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Fugit deserunt ratione at? Quas saepe doloremque ipsum enim
+                  quis labore eveniet explicabo aliquam, neque minima laborum
+                  distinctio dolores non fuga quaerat.</span
+                >
+                <button class="act-btn slide-btn">
+                  Dowiedz się więcej!
+                </button>
+              </div>
+            </div>
+          </section>
+          <section class="slide" id="section_5">
+            <div class="slide_wrapper">
+              <div class="slide_wrapper_box">
+                <h1 class="slide_wrapper_header">Serwis</h1>
+                <hr />
+                <span class="slide_wrapper_content"
+                  >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Fugit deserunt ratione at? Quas saepe doloremque ipsum enim
+                  quis labore eveniet explicabo aliquam, neque minima laborum
+                  distinctio dolores non fuga quaerat.</span
+                >
+                <button class="act-btn slide-btn">
+                  Dowiedz się więcej!
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+        <ul id="slider_controls" class="controls">
+          <li class="prev">
+            <img src="./images/icons/arrow-left.png" />
+          </li>
+          <li class="next">
+            <img src="./images/icons/arrow-right.png" />
+          </li>
+        </ul>
+      </section>
+      <div class="content content1">
+        <section class="about">
+          <h1 id="rekuperacja">Wentylacja mechaniczna i rekuperacja</h1>
+          <img src="images/window.png" alt="window" />
+          <h2>Co to jest rekuperacja?</h2>
+          <hr />
+          <span>
+            Rekuperacja jest wentylacją mechaniczną z odzyskiem ciepła,
+            urządzenie służące do wentylacji domów jednorodzinnych nazywamy
+            rekuperatorem. Rekuperator to urządzenie elektryczne, które zapewnia
+            wymianę powietrza w wentylowanych pomieszczeniach poprzez wywiewanie
+            zanieczyszczonego, zużytego powietrza i nawiewanie przefiltrowanego
+            świeżego powietrza. Sercem rekuperatora jest wymiennik ciepła,
+            którego zadaniem jest odzyskanie energii cieplnej z powietrza
+            wywiewanego i dzięki temu procesowi nie dochodzi do strat ciepła a
+            strumień powietrza nawiewanego jest wstępnie ogrzany co w
+            konsekwencji spowoduje zmniejszenie zużycia energii przez system
+            grzewczy i to właśnie te cechy przemawiają za zastosowaniem
+            wentylacji mechanicznej względem grawitacyjnej, która nie dość , że
+            działa tylko w przypadku, kiedy temperatura zewnętrzna osiąga
+            wartość poniżej 12 stopni Celsjusza to aby wywołać ruch powietrza w
+            kominach grawitacyjnych należy rozszczelnić okna co powoduje straty
+            ciepła , szacuje się , że wentylacja grawitacyjna stanowi około 40%
+            strat ciepła w budynku. Każde urządzenie tego typu powinno być
+            również wyposażone w filtry powietrza służące do oczyszczenia
+            zarówno powietrza świeżego zewnętrznego jak i powietrza wywiewanego
+            z pomieszczeń.
+            <br />
+            <br />
+            Ważne jest aby już na etapie projektu architektonicznego budynku
+            przewidzieć instalację wentylacji mechanicznej ponieważ może nam to
+            zaoszczędzić kosztów inwestycyjnych np. przy zastosowaniu
+            rekuperacji nie ma potrzeby budowania kominów wentylacji
+            grawitacyjnej a wręcz jest to nie wskazane ponieważ podczas
+            działania wentylacji mechanicznej przewody grawitacyjne muszą być
+            zamknięte, kolejną istotną kwestią jest wykonanie otworów przez
+            strop do osadzenia anemostatów wywiewnych i nawiewnych aby uniknąć
+            późniejszego wiercenia w pułapie. Opracowanie projektu instalacji
+            wentylacji na wczesnym etapie zapobiegnie kolizją z innymi
+            instalacjami oraz da możliwość przemyślenia trasy rozłożenia
+            instalacji tak aby przy montażu nie było konieczności budowania
+            dodatkowych szachtów bądź przesunięć ścianek działkowych ponadto da
+            możliwość wyboru odpowiedniego pomieszczenia na umiejscowienie
+            rekuperatora.
+            <br />
+            <br />
+            Najważniejsze zalety zastosowania instalacji wentylacji mechanicznej
+            to : sprawność działania-wentylacja działa cały rok bez względu na
+            warunki atmosferyczne oraz temperaturę zewnętrzną. Odpowiednia
+            jakość powietrza dzięki filtrom zastosowanym w urządzeniu- obecnie
+            również możliwość zastosowania filtrów węglowych oraz o wysokiej
+            klasie filtracji aby ochronić budynek przed smogiem i
+            zanieczyszczeniami dla alergików. Oszczędność na instalacji
+            centralnego ogrzewania dzięki zastosowaniu wymiennika do odzysku
+            ciepła.
+            <br />
+            <br />
+            Firma Huma Instalacje ? pomoże Państwu dobrać zarówno odpowiednie
+            urządzenie ( rekuperator ) , zaproponujemy optymalną i ekonomiczną
+            trasę rozprowadzenia przewodów wentylacyjnych dedykowaną do
+            konkretnego budynku , pomożemy w wyborze rodzaju kanałów
+            wentylacyjnych, wykonamy montaż wszystkich elementów instalacji.
+            <br />
+            <br />
+            Już dziś skontaktuj się z nami i oddychaj czystym , świeżym
+            powietrzem !!!!
+          </span>
+          <button>Skontaktuj się z nami!</button>
         </section>
-        <section class="clients">
-            <div class="clients_client client--1">
-                <div class="clients_client_intern">
-                    <h1>Kliencie</h1>
-                    <hr />
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo non perspiciatis quis alias laborum maiores? Nostrum voluptas et, perferendis maxime sit quo laudantium temporibus nam. Nobis excepturi voluptates eius odit!
-                    </p>
-                    <button>
-                        Click me
-                    </button>
-                </div>
-            </div>            
-            <div class="clients_client client--2">
-                <div class="clients_client_intern">
-                    <h1>Kliencie</h1>
-                    <hr />
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo non perspiciatis quis alias laborum maiores? Nostrum voluptas et, perferendis maxime sit quo laudantium temporibus nam. Nobis excepturi voluptates eius odit!
-                    </p>
-                    <button>
-                        Click me
-                    </button>
-                </div>
-            </div>            
-            <div class="clients_client client--3">
-                <div class="clients_client_intern">
-                    <h1>Kliencie</h1>
-                    <hr />
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo non perspiciatis quis alias laborum maiores? Nostrum voluptas et, perferendis maxime sit quo laudantium temporibus nam. Nobis excepturi voluptates eius odit!
-                    </p>
-                    <button>
-                        Click me
-                    </button>                
-                </div>
-            </div>
-            <!-- <div class="clients_client client--2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti pariatur dolor corrupti, distinctio ab porro sit magnam unde possimus placeat, provident repellendus in facilis quos itaque commodi dolorem veritatis a!</div> -->
-            <!-- <div class="clients_client client--3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, soluta repudiandae earum nihil incidunt quidem dolor ipsum quis molestiae minima perferendis adipisci eum illum reiciendis molestias odit obcaecati consequuntur iusto!</div> -->
-        </section>
-        <section class="offers">
-            <div class="offers_offer offer--1">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque provident sunt voluptatum, cupiditate omnis dolore id laudantium consequuntur dignissimos magnam iure doloribus modi repudiandae expedita inventore ducimus sint culpa. Laboriosam!
-            </div>
-            <div class="offers_offer offer--2">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium tenetur enim sapiente voluptatum expedita, ullam vel nulla dicta, minus saepe soluta, voluptate veritatis nisi at sit. Molestias beatae mollitia quam!
-            </div>
-            <div class="offers_offer offer--3">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis porro dolorem eos dolores dolorum cumque sequi modi corporis reiciendis deleniti eius, ipsum error itaque, dicta sapiente eveniet amet earum recusandae?
-            </div>
-            <div class="offers_offer offer--4">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et illo odit odio fuga similique vero quasi a minima vitae at voluptatem magni, perspiciatis, voluptas doloribus nam aspernatur accusantium distinctio quod.
-            </div>
-        </section>
-        <footer>
-            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam minima, ut saepe inventore optio aperiam a nisi dolor enim temporibus ea nulla culpa, tempora aliquid incidunt error accusamus vitae. Impedit.</span>
-        </footer>
+      </div>
+      <section class="stats">
+        <div class="stats_cell cell--1">
+          <img src="images/window.png" alt="window" />
+          <span class="number">2000</span>
+          <span class="desc">Lorem ipsum dolor sit </span>
+        </div>
+        <div class="stats_cell cell--2">
+          <img src="images/window.png" alt="window" />
+          <span class="number">2000</span>
+          <span class="desc">Lorem ipsum dolor sit </span>
+        </div>
+        <div class="stats_cell cell--3">
+          <img src="images/window.png" alt="window" />
+          <span class="number">2000</span>
+          <span class="desc">Lorem ipsum dolor sit </span>
+        </div>
+      </section>
+      <section class="offers">
+        <div class="offers_offer offers_offer_1" id="klimatyzacja">
+          <div class="offers_offer-img_wrapper">
+            <img src="images/client_1.jpg" />
+          </div>
+          <span>
+            <h1 class="left-header">Klimatyzacja</h1>
+            <p>
+              Odpowiednia temperatura w pomieszczeniach ma wpływ na komfort oraz
+              dobre samopoczucie, temperatura komfortu wynosi około 22 stopnie
+              Celsjusza i aby ją uzyskać w okresie letnim konieczne jest
+              zastosowanie klimatyzatorów. Zadaniem tych urządzeń jest
+              schłodzenie powietrza w klimatyzowanym pomieszczeniu do zadanej
+              temperatury ( wyznaczonej przez użytkownika).Obecnie na rynku
+              dostępne są klimatyzatory : ścienne, podłogowe, kasetonowe,
+              kanałowe. Najważniejsze kryteria w wyborze odpowiedniego
+              klimatyzatora to wysoka energooszczędność urządzenia i odpowiednia
+              głośność urządzenia, nasi fachowcy pomogą Państwu w wyborze
+              odpowiedniego rozwiązania dedykowanego do Państwa potrzeb i
+              możliwości montażu w domu.
+            </p>
+          </span>
+        </div>
+        <div class="offers_offer offers_offer_2" id="dystrybucja-ciepla">
+          <div class="offers_offer-img_wrapper">
+            <img src="images/client_2.jpg" />
+          </div>
+          <span>
+            <h1 class="left-header">Dystrybucja gorącego powietrza</h1>
+            <p>
+              W dzisiejszych czasach kominki nie muszą służyć tylko do ozdoby
+              czy ogrzania jednego pomieszczenia ale również do ogrzania całego
+              domu i jest to możliwe dzięki instalacji dystrybucji gorącego
+              powietrza. Działanie systemu dystrybucji gorącego powietrza jest
+              niezwykle proste. Ogień znajdujący się w kominku rozgrzewa wkład
+              kominkowy, który z kolei, oddaje to ciepło powietrzu, które
+              znajduje się w jego pobliżu. Powietrze jest również ogrzewane od
+              rury spalinowej odprowadzającej produkty spalania drewna do
+              komina. Ogrzane w ten sposób powietrze jest transportowane przy
+              pomocy przewodów wentylacyjnych oraz wentylatora kominkowego
+              przystosowanego do pracy wysokich temperaturach do pomieszczeń.
+              Dzięki takiej instalacji nie musimy tracić ciepła, które
+              uzyskujemy podczas palenia w kominku.
+            </p>
+          </span>
+        </div>
+      </section>
+      <section class="business" id="biura">
+        <div class="business_content">
+          <div class="business_content_desc">
+            <h1 class="left-header">Budynki użyteczności publicznej</h1>
+            <p>
+              Firma Huma Instalacje świadczy swoje usługi w wentylacji biur ,
+              powierzchnia usługowo-handlowych , halach produkcyjnych. Od
+              projektu po montaż. Do każdego pomieszczenia podchodzimy w sposób
+              indywidualny i proponujemy ekonomiczną i poprawnie działającą
+              instalację.
+            </p>
+            <button class="act-btn">
+              Dowiedz się więcej!
+            </button>
+          </div>
+          <div class="business_content_image-wrapper">
+            <img src="./images/client_1.jpg" />
+          </div>
+        </div>
+      </section>
+      <footer>
+        <span
+          >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+          minima, ut saepe inventore optio aperiam a nisi dolor enim temporibus
+          ea nulla culpa, tempora aliquid incidunt error accusamus vitae.
+          Impedit.</span
+        >
+      </footer>
     </div>
-</body>
+  </body>
 </html>

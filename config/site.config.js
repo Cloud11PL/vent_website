@@ -9,10 +9,10 @@ if (!ROOT) {
 
 const config = {
   // Your website's name, used for favicon meta tags
-  site_name: 'Wentylacja',
+  site_name: 'Static Site Boilerplate',
 
   // Your website's description, used for favicon meta tags
-  site_description: 'Strona o wentylacji',
+  site_description: 'A modern boilerplate for static website development',
 
   // Your website's URL, used for sitemap
   site_url: '',
