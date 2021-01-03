@@ -15,7 +15,7 @@ const config = {
   site_description: 'A modern boilerplate for static website development',
 
   // Your website's URL, used for sitemap
-  site_url: '',
+  site_url: 'elastic-kare-ae2430.netlify.app',
 
   // Google Analytics tracking ID (leave blank to disable)
   googleAnalyticsUA: '',
