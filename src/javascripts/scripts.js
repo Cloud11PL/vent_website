@@ -1,5 +1,5 @@
 import { tns } from 'tiny-slider/src/tiny-slider';
-// import gsap from 'gsap';
+import L from 'leaflet';
 
 const slider = tns({
   container: '.my-slider',
@@ -20,13 +20,6 @@ window.addEventListener('scroll', () => {
   const navbar = document.querySelector('nav');
   navbar.classList.toggle('fixed', window.scrollY > 48);
 });
-
-// const elements = (index) => document.getElementsByClassName('slide_wrapper_header')[index];
-// const contentElements = (index) => document.getElementsByClassName(
-//   'slide_wrapper_content',
-// )[index];
-// const hrElements = (index) => document.querySelectorAll('div.slide_wrapper > hr')[index];
-// const btnElements = (index) => document.querySelectorAll('div.slide_wrapper > button')[index];
 
 const toggleMenu = () => {
   const menu = document.querySelector('#menu');
@@ -54,56 +47,25 @@ document.querySelector('#check').addEventListener('change', () => {
   toggleMenu();
 });
 
-// slider.events.on('transitionStart', () => {
-//   let index = slider.getInfo().navCurrentIndex;
-//   if (document.getElementsByClassName('slide_wrapper').length === index) {
-//     index = 0;
-//   } else {
-//     index += 1;
-//   }
+const map = L.map('map', {
+  renderer: L.canvas(),
+  center: L.latLng(50.26, 19.02),
+  zoom: 10,
+});
 
-//   // gsap.set(elements(index), {
-//   //   duration: 0.5,
-//   //   opacity: 0,
-//   //   y: -50,
-//   // });
+const myRenderer = L.canvas({ padding: 0.5 });
 
-//   // gsap.to(elements(index), {
-//   //   duration: 0.5,
-//   //   opacity: 1,
-//   //   y: 0,
-//   // });
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-//   // gsap.from(hrElements(index), {
-//   //   duration: 0.5,
-//   //   opacity: 0,
-//   //   y: -50,
-//   //   delay: 0.5,
-//   // });
+L.circle([50.26, 19.02], {
+  color: 'red',
+  fillColor: '#f03',
+  radius: 50000,
+  renderer: myRenderer,
+}).addTo(map);
 
-//   // gsap.from(contentElements(index), {
-//   //   duration: 0.5,
-//   //   opacity: 0,
-//   //   y: -50,
-//   //   delay: 1,
-//   // });
+setTimeout(() => {
+  map.invalidateSize();
+}, 500);
 
-//   // gsap.from(btnElements(index), {
-//   //   duration: 1,
-//   //   opacity: 0,
-//   //   y: -50,
-//   //   delay: 1.2,
-//   // });
-// });
-
-// // slider.events.on('transitionEnd', () => {
-// //   gsap.from(elements, {
-// //     duration: 1,
-// //     opacity: 1,
-// //     y: -50,
-// //   });
-// // });
-
-// // gsap.to('#temp_animate', {
-// //   opacity
-// // })
+map.invalidateSize();

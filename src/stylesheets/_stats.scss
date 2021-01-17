@@ -1,0 +1,76 @@
+.stats {
+  grid-area: stats;
+  background-color: rgb(248, 248, 248);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+  }
+
+  &_cell {
+    max-height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $small-padding;
+    width: 30%;
+    text-align: center;
+
+    @media (min-width: $tablet) {
+      padding: $smaller-padding;
+    }
+
+    @media (min-width: $laptop) {
+      padding: $typical-padding;
+    }
+
+    .number {
+      color: $darker-green;
+      font-size: 1em;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      @media (min-width: $tablet) {
+        font-size: 2em;
+      }
+    }
+
+    .desc {
+      color: black;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    img {
+      object-fit: contain;
+      width: 3em;
+      height: 3em;
+
+      @media (min-width: $tablet) {
+        width: 4em;
+        height: 4em;
+      }
+    }
+  }
+
+  .cell {
+    &--1 {
+      grid-area: cell--1;
+    }
+
+    &--2 {
+      grid-area: cell--2;
+    }
+
+    &--3 {
+      grid-area: cell--3;
+    }
+  }
+}
