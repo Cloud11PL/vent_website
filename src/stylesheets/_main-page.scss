@@ -1,10 +1,6 @@
 body {
   margin: 0;
-  font-family: "Lato", sans-serif;
-}
-
-span {
-  // line-height: 1.2em;
+  font-family: 'Lato', sans-serif;
 }
 
 p {
@@ -107,149 +103,23 @@ h1 {
   grid-template-rows: minmax(min-content, auto);
   margin: 0 auto;
   grid-template-areas:
-    "info info"
-    "nav nav"
-    "hero hero"
-    "content1 content1"
-    "stats stats"
-    "offer offer"
-    "business business"
-    "footer footer";
+    'info info'
+    'nav nav'
+    'hero hero'
+    'content1 content1'
+    'stats stats'
+    'offer offer'
+    'business business'
+    'map map'
+    'footer footer';
   overflow-x: hidden;
   overflow-y: hidden;
-}
-
-.contact-info {
-  grid-area: info;
-  display: flex;
-  background-color: $dark-blue;
-  color: white;
-  justify-content: flex-end;
-  padding: 0.5rem;
-  height: 3rem;
-  position: absolute;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-}
-
-nav {
-  grid-area: nav;
-  background-color: rgba(255, 255, 255, 1);
-  padding: 1em;
-  height: 5em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-  margin-top: 3em;
-
-  &.fixed {
-    position: fixed;
-    margin-top: 0;
-  }
-
-  img {
-    object-fit: contain;
-  }
-
-  section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .checkbtn {
-    font-size: 2em;
-    float: right;
-    cursor: pointer;
-    display: none;
-  }
-
-  #check {
-    display: none;
-  }
-
-  #check:checked + section {
-    left: 0 !important;
-  }
-
-  @media (max-width: $tablet) {
-    .checkbtn {
-      display: block;
-      color: black;
-    }
-
-    #menu {
-      position: fixed;
-      width: 70vw;
-      height: 100vh;
-      background: #2c3e50;
-      top: 0;
-      left: -100%;
-      text-align: center;
-      transition: all 0.5s;
-      flex-direction: column;
-
-      & a {
-        display: block;
-        margin: 2em 0;
-        line-height: 1.5em;
-      }
-    }
-
-    a:hover,
-    a.active {
-      background: none;
-      color: #0082e6;
-    }
-  }
 }
 
 .my-slider {
   margin-top: 12em;
   height: calc(100vh - 10em);
   width: 100vw;
-}
-
-.controls {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: calc(100% - 1em);
-  display: flex;
-  justify-content: space-between;
-  z-index: 1;
-  text-align: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0 0.5em;
-
-  &:focus {
-    outline: none;
-  }
-
-  & li {
-    background-color: rgba(white, 0.3);
-    padding: 0.5em;
-    transition: 0.5s;
-    border-radius: 50%;
-
-    img {
-      width: 1.5em;
-      height: 1.5em;
-    }
-
-    &:hover {
-      background-color: rgba($dark-blue, 0.5);
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
 }
 
 .tns-nav {
@@ -278,226 +148,6 @@ nav {
   }
 }
 
-@keyframes backgroundEffect {
-  0% {
-    // background-position: 0% 0%;
-    background-size: 100%;
-  }
-
-  50% {
-    // background-position: 30% 30%;
-    background-size: 105%;
-  }
-
-  100% {
-    // background-position: 0% 0%;
-    background-size: 100%;
-  }
-}
-
-.slide {
-  // background-color: red;
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-clip: border-box;
-  background-size: 100% 100%;
-  // animation: backgroundEffect 20s infinite !important;
-
-  &_wrapper {
-    // min-height: 30vh;
-    height: 100%;
-    width: 100%;
-    // transform: translateY(50%);
-
-    &_box {
-      @media (min-width: $tablet) {
-        margin: 13em auto;
-        padding: $small-padding;
-        width: 50vw;
-      }
-
-      @media (min-width: $laptop) {
-        margin: 11em auto;
-        padding: $smaller-padding;
-      }
-
-      @media (min-width: $laptopL) {
-        margin: 10em auto;
-        padding: calc(#{$typical-padding} - 1em);
-      }
-
-      margin: 10em auto;
-      padding: 2em;
-      // border: 1rem rgba(128, 128, 128, 0.5) solid;
-      border-radius: 0.2rem;
-      position: relative;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.2);
-      // margin: auto;
-      min-width: 50vw;
-    }
-
-    hr {
-      border: 1px black solid;
-      margin-bottom: 2rem;
-    }
-
-    span {
-      display: inline-block;
-    }
-  }
-}
-
-$blend-color: rgba(0, 0, 0, 0.5);
-
-.hero {
-  grid-area: hero;
-  // background-clip: border-box;
-  // background-size: cover;
-  height: 100vh;
-
-  @media (max-width: $mobileL) {
-    display: none;
-  }
-
-  #section_1 {
-    background: url(../images/slider-image-1.jpg) $blend-color;
-    background-blend-mode: multiply;
-    background-position: center;
-    background-clip: border-box;
-    background-size: 100% 100%;
-  }
-
-  #section_2 {
-    background: url(../images/slider-image-2.jpg) $blend-color;
-    background-blend-mode: multiply;
-    background-position: center;
-    background-clip: border-box;
-    background-size: 100% 100%;
-  }
-
-  #section_3 {
-    background: url(../images/slider-image-3.jpg) $blend-color;
-    background-blend-mode: multiply;
-    background-position: center;
-    background-clip: border-box;
-    background-size: 100% 100%;
-  }
-
-  #section_4 {
-    background: url(../images/slider-image-1.jpg) $blend-color;
-    background-blend-mode: multiply;
-    background-position: center;
-    background-clip: border-box;
-    background-size: 100% 100%;
-  }
-
-  #section_5 {
-    background: url(../images/slider-image-2.jpg) $blend-color;
-    background-blend-mode: multiply;
-    background-position: center;
-    background-clip: border-box;
-    background-size: 100% 100%;
-  }
-
-  @keyframes fade-in {
-    0% {
-      opacity: 0%;
-    }
-
-    // 10% {
-    //   opacity: 25%;
-    // }
-
-    // 50% {
-    //   opacity: 50%;
-    // }
-
-    // 80% {
-    //   opacity: 85%;
-    // }
-
-    100% {
-      opacity: 100%;
-    }
-  }
-
-  @keyframes fade-out {
-    0% {
-      opacity: 100%;
-    }
-
-    10% {
-      opacity: 50%;
-    }
-
-    50% {
-      opacity: 20%;
-    }
-
-    60% {
-      opacity: 10%;
-    }
-
-    80% {
-      opacity: 0%;
-    }
-
-    100% {
-      opacity: 0%;
-    }
-  }
-
-  .animation_fade-in {
-    -webkit-animation-name: fade-in;
-    animation-name: fade-in;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-  }
-
-  .animation_fade-out {
-    -webkit-animation-name: fade-out;
-    animation-name: fade-out;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-  }
-
-  &-box {
-    z-index: 2;
-    margin: 40vh 20vw;
-    height: 40vh;
-    width: inherit;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 3rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    border-style: solid;
-    border-width: 1.4rem;
-    border-color: rgba(245, 245, 245, 0.9);
-    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
-
-    section {
-      max-width: 70%;
-    }
-
-    #sample {
-      width: auto;
-      object-fit: cover;
-    }
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-}
-
 .content {
   background-size: cover;
   background-attachment: fixed;
@@ -508,7 +158,7 @@ $blend-color: rgba(0, 0, 0, 0.5);
 
 .content1 {
   grid-area: content1;
-  background-image: url(../images/window-apartment.jpg);
+  background-image: url(../images/home.jpg);
 }
 
 .content2 {
@@ -549,6 +199,25 @@ $blend-color: rgba(0, 0, 0, 0.5);
   justify-items: center;
   align-items: center;
 
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 1em;
+    padding-top: 2em;
+    background-blend-mode: overlay;
+    background-color: $white-blend-color;
+    background-image: url(../images/home.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+    @media (min-width: $tablet) {
+      padding-top: 0;
+      background: none;
+    }
+  }
+
   h2 {
     font-size: 1rem;
     color: $dark-blue;
@@ -559,8 +228,10 @@ $blend-color: rgba(0, 0, 0, 0.5);
   }
 
   hr {
-    color: $gray;
-    border-width: 2px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 2px solid $gray;
     margin-top: 5rem;
     margin-bottom: 2rem;
     width: 40%;
@@ -584,83 +255,12 @@ hr {
   width: 40%;
 }
 
-.stats {
-  grid-area: stats;
-  background-color: rgb(248, 248, 248);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  &_cell {
-    max-height: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: $small-padding;
-
-    @media (min-width: $tablet) {
-      padding: $smaller-padding;
-    }
-
-    @media (min-width: $laptop) {
-      padding: $typical-padding;
-    }
-
-    .number {
-      color: $green;
-      font-size: 1em;
-      font-weight: 600;
-
-      @media (min-width: $tablet) {
-        font-size: 2em;
-      }
-    }
-
-    .desc {
-      color: black;
-      text-transform: uppercase;
-      font-size: 1em;
-      font-weight: 300;
-      text-align: center;
-    }
-
-    img {
-      object-fit: contain;
-      width: 3em;
-      height: 3em;
-
-      @media (min-width: $tablet) {
-        width: 4em;
-        height: 4em;
-      }
-    }
-  }
-
-  .cell {
-    &--1 {
-      grid-area: cell--1;
-      // background-image: url(../images/client_1.jpg);
-    }
-
-    &--2 {
-      grid-area: cell--2;
-      // background-image: url(../images/client_2.jpg);
-    }
-
-    &--3 {
-      grid-area: cell--3;
-      // background-image: url(../images/client_3.jpg);
-    }
-  }
-}
-
 .clients {
   grid-area: clients;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: minmax(85vh, auto);
-  grid-template-areas: "client--1 client--2 client--3";
+  grid-template-areas: 'client--1 client--2 client--3';
 
   &_client {
     transition: 0.5s;
@@ -782,8 +382,8 @@ hr {
       flex: 1;
 
       img {
-        max-width: 100%;
-        max-height: 100%;
+        height: 25em;
+        width: 100%;
         object-fit: cover;
       }
     }
@@ -869,6 +469,12 @@ hr {
       }
     }
   }
+}
+
+#map {
+  grid-area: map;
+  height: 400px;
+  width: 100%;
 }
 
 footer {

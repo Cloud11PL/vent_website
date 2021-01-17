@@ -1,0 +1,14 @@
+.contact-info {
+  grid-area: info;
+  display: flex;
+  background-color: $dark-blue;
+  color: white;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  height: 3rem;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100vw;
+  box-sizing: border-box;
+}

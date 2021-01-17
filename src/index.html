@@ -2,14 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Static Site Boilerplate</title>
+    <title>Huma Wentylacje</title>
     <meta name="description" content="" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./stylesheets/all.css" />
     <script defer src="./javascripts/all.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
   </head>
   <body>
     <div id="content">
@@ -31,7 +43,7 @@
           <i class="fas fa-bars"></i>
         </label>
       </nav>
-      <section class="hero">
+      <section class="hero" data-aos="fade-in">
         <div class="my-slider">
           <section class="slide" id="section_1">
             <div class="slide_wrapper">
@@ -48,9 +60,7 @@
                     distinctio dolores non fuga quaerat.
                   </p></span
                 >
-                <button class="slide-btn">
-                  Dowiedz się więcej!
-                </button>
+                <button class="slide-btn">Dowiedz się więcej!</button>
               </div>
             </div>
           </section>
@@ -67,9 +77,7 @@
                   quis labore eveniet explicabo aliquam, neque minima laborum
                   distinctio dolores non fuga quaerat.</span
                 >
-                <button class="act-btn slide-btn">
-                  Dowiedz się więcej!
-                </button>
+                <button class="act-btn slide-btn">Dowiedz się więcej!</button>
               </div>
             </div>
           </section>
@@ -84,9 +92,7 @@
                   quis labore eveniet explicabo aliquam, neque minima laborum
                   distinctio dolores non fuga quaerat.</span
                 >
-                <button class="act-btn slide-btn">
-                  Dowiedz się więcej!
-                </button>
+                <button class="act-btn slide-btn">Dowiedz się więcej!</button>
               </div>
             </div>
           </section>
@@ -101,9 +107,7 @@
                   quis labore eveniet explicabo aliquam, neque minima laborum
                   distinctio dolores non fuga quaerat.</span
                 >
-                <button class="act-btn slide-btn">
-                  Dowiedz się więcej!
-                </button>
+                <button class="act-btn slide-btn">Dowiedz się więcej!</button>
               </div>
             </div>
           </section>
@@ -118,9 +122,7 @@
                   quis labore eveniet explicabo aliquam, neque minima laborum
                   distinctio dolores non fuga quaerat.</span
                 >
-                <button class="act-btn slide-btn">
-                  Dowiedz się więcej!
-                </button>
+                <button class="act-btn slide-btn">Dowiedz się więcej!</button>
               </div>
             </div>
           </section>
@@ -135,11 +137,13 @@
         </ul>
       </section>
       <div class="content content1">
-        <section class="about">
-          <h1 id="rekuperacja">Wentylacja mechaniczna i rekuperacja</h1>
-          <img src="images/window.png" alt="window" />
-          <h2>Co to jest rekuperacja?</h2>
-          <hr />
+        <section class="about" data-aos="fade-in">
+          <div class="about-wrapper">
+            <h1 id="rekuperacja">Wentylacja mechaniczna i rekuperacja</h1>
+            <img src="images/window.png" alt="window" />
+            <h2>Co to jest rekuperacja?</h2>
+            <hr />
+          </div>
           <span>
             Rekuperacja jest wentylacją mechaniczną z odzyskiem ciepła,
             urządzenie służące do wentylacji domów jednorodzinnych nazywamy
@@ -204,25 +208,29 @@
           <button>Skontaktuj się z nami!</button>
         </section>
       </div>
-      <section class="stats">
+      <section class="stats" data-aos="fade-in">
         <div class="stats_cell cell--1">
-          <img src="images/window.png" alt="window" />
-          <span class="number">2000</span>
-          <span class="desc">Lorem ipsum dolor sit </span>
+          <img src="images/icons/air-conditioning.png" alt="stats icon" />
+          <span class="number">8 lat</span>
+          <span class="desc">Doświadczenia </span>
         </div>
         <div class="stats_cell cell--2">
-          <img src="images/window.png" alt="window" />
-          <span class="number">2000</span>
-          <span class="desc">Lorem ipsum dolor sit </span>
+          <img src="images/icons/family.png" alt="stats icon" />
+          <span class="number">Profesjonalny</span>
+          <span class="desc">Montaż i serwis</span>
         </div>
         <div class="stats_cell cell--3">
-          <img src="images/window.png" alt="window" />
-          <span class="number">2000</span>
-          <span class="desc">Lorem ipsum dolor sit </span>
+          <img src="images/icons/maintenence.png" alt="stats icon" />
+          <span class="number">Kompleksowe rozwiązania</span>
+          <span class="desc">Pełne zadowolenie</span>
         </div>
       </section>
       <section class="offers">
-        <div class="offers_offer offers_offer_1" id="klimatyzacja">
+        <div
+          class="offers_offer offers_offer_1"
+          id="klimatyzacja"
+          data-aos="fade-left"
+        >
           <div class="offers_offer-img_wrapper">
             <img src="images/client_1.jpg" />
           </div>
@@ -244,9 +252,13 @@
             </p>
           </span>
         </div>
-        <div class="offers_offer offers_offer_2" id="dystrybucja-ciepla">
+        <div
+          class="offers_offer offers_offer_2"
+          id="dystrybucja-ciepla"
+          data-aos="fade-right"
+        >
           <div class="offers_offer-img_wrapper">
-            <img src="images/client_2.jpg" />
+            <img src="images/heat_dist.jpg" />
           </div>
           <span>
             <h1 class="left-header">Dystrybucja gorącego powietrza</h1>
@@ -268,7 +280,7 @@
           </span>
         </div>
       </section>
-      <section class="business" id="biura">
+      <section class="business" id="biura" data-aos="fade-in">
         <div class="business_content">
           <div class="business_content_desc">
             <h1 class="left-header">Budynki użyteczności publicznej</h1>
@@ -279,15 +291,14 @@
               indywidualny i proponujemy ekonomiczną i poprawnie działającą
               instalację.
             </p>
-            <button class="act-btn">
-              Dowiedz się więcej!
-            </button>
+            <button class="act-btn">Dowiedz się więcej!</button>
           </div>
           <div class="business_content_image-wrapper">
             <img src="./images/client_1.jpg" />
           </div>
         </div>
       </section>
+      <div id="map" class="map"></div>
       <footer>
         <span
           >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
@@ -297,5 +308,9 @@
         >
       </footer>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
