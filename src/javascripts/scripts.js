@@ -7,7 +7,7 @@ const slider = tns({
   items: 1,
   autoplay: true,
   autoplayHoverPause: true,
-  autoplayTimeout: 20000,
+  autoplayTimeout: 5000,
   autoplayButtonOutput: false,
   controlsContainer: '#slider_controls',
   speed: 500,
