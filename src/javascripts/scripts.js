@@ -1,10 +1,11 @@
 import { tns } from 'tiny-slider/src/tiny-slider';
 import L from 'leaflet';
+import AOS from 'aos';
 
 const slider = tns({
   container: '.my-slider',
   items: 1,
-  autoplay: false,
+  autoplay: true,
   autoplayHoverPause: true,
   autoplayTimeout: 20000,
   autoplayButtonOutput: false,
@@ -69,3 +70,8 @@ setTimeout(() => {
 }, 500);
 
 map.invalidateSize();
+
+AOS.init({
+  startEvent: 'load',
+  once: false,
+});
